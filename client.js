@@ -21,6 +21,8 @@ const connect = function() {
   conn.on("connect", (message) => {
     console.log("Successfully connected to the game server.");
     conn.write("Name: ESZ");
+    
+
   });
   // interpret incoming data as text
   conn.setEncoding("utf8");
@@ -28,4 +30,55 @@ const connect = function() {
   return conn;
 };
 
-module.exports = {connect};
+module.exports = { connect };
+
+//"Move: up" - move up one square (unless facing down)
+// "Move: down" - move down one square (unless facing up)
+// "Move: left" - move left one square (unless facing right)
+// "Move: right" - move (??right)left one square (unless facing left)
+
+
+
+// let timer = 1000;
+//     setTimeout(() => {
+//       conn.write("Move: up");
+//     }, timer);
+//     timer += 1000;
+//     setTimeout(() => {
+//       conn.write("Move: up");
+//     }, timer);
+//     timer += 1000;
+//     setTimeout(() => {
+//       conn.write("Move: up");
+//     }, timer);
+//     timer += 1000;
+//     setTimeout(() => {
+//       conn.write("Move: left");
+//     }, timer);
+//     timer += 1000;
+//     setTimeout(() => {
+//       conn.write("Move: down");
+//     }, timer);
+//     timer += 1000;
+//     setTimeout(() => {
+//       conn.write("Move: down");
+//     }, timer);
+//     timer += 1000;
+//     setTimeout(() => {
+//       conn.write("Move: down");
+//     }, timer);
+//     timer += 1000;
+//     setTimeout(() => {
+//       conn.write("Move: left");
+//     }, timer);
+//     timer += 1000;
+//     setTimeout(() => {
+//       conn.write("Move: down");
+//     }, timer);
+//     setTimeout(() => {
+//       conn.write("Move: down");
+//     }, timer);
+//     timer += 1000;
+//     setTimeout(() => {
+//       conn.write("Move: right");
+//     }, timer);
