@@ -2,8 +2,10 @@
 
 const net = require("net");
 
-const host = '165.227.47.243';
-const port = 50541;
+const { IP, PORT } = require("./constants");
+
+const host = IP;
+const port = PORT;
 
 const connectionConfig = {
   host,
